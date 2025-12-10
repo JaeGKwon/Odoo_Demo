@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- 부서 설정 -->
+        <record id="hr_department_production" model="hr.department">
+            <field name="name">생산부</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+        <record id="hr_department_sales" model="hr.department">
+            <field name="name">영업부</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+        <record id="hr_department_purchase" model="hr.department">
+            <field name="name">구매부</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+        <record id="hr_department_quality" model="hr.department">
+            <field name="name">품질관리부</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+        <record id="hr_department_maintenance" model="hr.department">
+            <field name="name">설비관리부</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+        <!-- 직원들 -->
+        <record id="hr_employee_production_manager" model="hr.employee">
+            <field name="name">김생산</field>
+            <field name="department_id" ref="hr_department_production"/>
+            <field name="job_title">생산부장</field>
+            <field name="work_email">production@korearefining.co.kr</field>
+            <field name="work_phone">+82-52-123-4568</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+        <record id="hr_employee_sales_manager" model="hr.employee">
+            <field name="name">이영업</field>
+            <field name="department_id" ref="hr_department_sales"/>
+            <field name="job_title">영업부장</field>
+            <field name="work_email">sales@korearefining.co.kr</field>
+            <field name="work_phone">+82-52-123-4569</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+        <record id="hr_employee_purchase_manager" model="hr.employee">
+            <field name="name">박구매</field>
+            <field name="department_id" ref="hr_department_purchase"/>
+            <field name="job_title">구매부장</field>
+            <field name="work_email">purchase@korearefining.co.kr</field>
+            <field name="work_phone">+82-52-123-4570</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+        <record id="hr_employee_quality_manager" model="hr.employee">
+            <field name="name">최품질</field>
+            <field name="department_id" ref="hr_department_quality"/>
+            <field name="job_title">품질관리부장</field>
+            <field name="work_email">quality@korearefining.co.kr</field>
+            <field name="work_phone">+82-52-123-4571</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+        <record id="hr_employee_maintenance_manager" model="hr.employee">
+            <field name="name">정설비</field>
+            <field name="department_id" ref="hr_department_maintenance"/>
+            <field name="job_title">설비관리부장</field>
+            <field name="work_email">maintenance@korearefining.co.kr</field>
+            <field name="work_phone">+82-52-123-4572</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+        <record id="hr_employee_production_worker_1" model="hr.employee">
+            <field name="name">강정제</field>
+            <field name="department_id" ref="hr_department_production"/>
+            <field name="job_title">정제공</field>
+            <field name="work_email">refining1@korearefining.co.kr</field>
+            <field name="work_phone">+82-52-123-4573</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+        <record id="hr_employee_production_worker_2" model="hr.employee">
+            <field name="name">윤정제</field>
+            <field name="department_id" ref="hr_department_production"/>
+            <field name="job_title">정제공</field>
+            <field name="work_email">refining2@korearefining.co.kr</field>
+            <field name="work_phone">+82-52-123-4574</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+        <record id="hr_employee_sales_rep_1" model="hr.employee">
+            <field name="name">임영업</field>
+            <field name="department_id" ref="hr_department_sales"/>
+            <field name="job_title">영업사원</field>
+            <field name="work_email">sales1@korearefining.co.kr</field>
+            <field name="work_phone">+82-52-123-4575</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+        <record id="hr_employee_sales_rep_2" model="hr.employee">
+            <field name="name">한영업</field>
+            <field name="department_id" ref="hr_department_sales"/>
+            <field name="job_title">영업사원</field>
+            <field name="work_email">sales2@korearefining.co.kr</field>
+            <field name="work_phone">+82-52-123-4576</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+        <record id="hr_employee_purchase_rep_1" model="hr.employee">
+            <field name="name">서구매</field>
+            <field name="department_id" ref="hr_department_purchase"/>
+            <field name="job_title">구매사원</field>
+            <field name="work_email">purchase1@korearefining.co.kr</field>
+            <field name="work_phone">+82-52-123-4577</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+    </data>
+</odoo>
+

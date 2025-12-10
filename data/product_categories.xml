@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- 제품 카테고리 -->
+        <record id="product_category_crude_oil" model="product.category">
+            <field name="name">원유</field>
+            <field name="parent_id" ref="product.product_category_all"/>
+        </record>
+
+        <record id="product_category_gasoline" model="product.category">
+            <field name="name">휘발유</field>
+            <field name="parent_id" ref="product.product_category_all"/>
+        </record>
+
+        <record id="product_category_diesel" model="product.category">
+            <field name="name">경유</field>
+            <field name="parent_id" ref="product.product_category_all"/>
+        </record>
+
+        <record id="product_category_heavy_oil" model="product.category">
+            <field name="name">중유</field>
+            <field name="parent_id" ref="product.product_category_all"/>
+        </record>
+
+        <record id="product_category_lpg" model="product.category">
+            <field name="name">LPG</field>
+            <field name="parent_id" ref="product.product_category_all"/>
+        </record>
+
+        <record id="product_category_naphtha" model="product.category">
+            <field name="name">나프타</field>
+            <field name="parent_id" ref="product.product_category_all"/>
+        </record>
+
+        <record id="product_category_asphalt" model="product.category">
+            <field name="name">아스팔트</field>
+            <field name="parent_id" ref="product.product_category_all"/>
+        </record>
+
+        <record id="product_category_lubricants" model="product.category">
+            <field name="name">윤활유</field>
+            <field name="parent_id" ref="product.product_category_all"/>
+        </record>
+
+        <record id="product_category_chemicals" model="product.category">
+            <field name="name">화학 원료</field>
+            <field name="parent_id" ref="product.product_category_all"/>
+        </record>
+
+        <record id="product_category_byproducts" model="product.category">
+            <field name="name">부산물</field>
+            <field name="parent_id" ref="product.product_category_all"/>
+        </record>
+    </data>
+</odoo>
+

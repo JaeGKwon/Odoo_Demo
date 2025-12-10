@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- 원유 제품들 -->
+        <record id="product_crude_oil_arabian_light" model="product.product">
+            <field name="name">아라비아 라이트 원유</field>
+            <field name="default_code">CRUDE-ARAB-LIGHT</field>
+            <field name="categ_id" ref="product_category_crude_oil"/>
+            <field name="type">product</field>
+            <field name="uom_id" ref="uom.product_uom_litre"/>
+            <field name="uom_po_id" ref="uom.product_uom_litre"/>
+            <field name="list_price">850.00</field>
+            <field name="standard_price">800.00</field>
+            <field name="sale_ok">False</field>
+            <field name="purchase_ok">True</field>
+            <field name="tracking">lot</field>
+            <field name="description">API 33-34도, 황 함량 1.8%</field>
+        </record>
+
+        <record id="product_crude_oil_arabian_heavy" model="product.product">
+            <field name="name">아라비아 헤비 원유</field>
+            <field name="default_code">CRUDE-ARAB-HEAVY</field>
+            <field name="categ_id" ref="product_category_crude_oil"/>
+            <field name="type">product</field>
+            <field name="uom_id" ref="uom.product_uom_litre"/>
+            <field name="uom_po_id" ref="uom.product_uom_litre"/>
+            <field name="list_price">750.00</field>
+            <field name="standard_price">700.00</field>
+            <field name="sale_ok">False</field>
+            <field name="purchase_ok">True</field>
+            <field name="tracking">lot</field>
+            <field name="description">API 27-28도, 황 함량 2.8%</field>
+        </record>
+
+        <record id="product_crude_oil_dubai" model="product.product">
+            <field name="name">두바이 원유</field>
+            <field name="default_code">CRUDE-DUBAI</field>
+            <field name="categ_id" ref="product_category_crude_oil"/>
+            <field name="type">product</field>
+            <field name="uom_id" ref="uom.product_uom_litre"/>
+            <field name="uom_po_id" ref="uom.product_uom_litre"/>
+            <field name="list_price">820.00</field>
+            <field name="standard_price">770.00</field>
+            <field name="sale_ok">False</field>
+            <field name="purchase_ok">True</field>
+            <field name="tracking">lot</field>
+            <field name="description">API 31도, 황 함량 2.0%</field>
+        </record>
+
+        <record id="product_crude_oil_wti" model="product.product">
+            <field name="name">WTI 원유</field>
+            <field name="default_code">CRUDE-WTI</field>
+            <field name="categ_id" ref="product_category_crude_oil"/>
+            <field name="type">product</field>
+            <field name="uom_id" ref="uom.product_uom_litre"/>
+            <field name="uom_po_id" ref="uom.product_uom_litre"/>
+            <field name="list_price">880.00</field>
+            <field name="standard_price">830.00</field>
+            <field name="sale_ok">False</field>
+            <field name="purchase_ok">True</field>
+            <field name="tracking">lot</field>
+            <field name="description">API 39-40도, 황 함량 0.24%</field>
+        </record>
+
+        <!-- 휘발유 제품들 -->
+        <record id="product_gasoline_premium" model="product.product">
+            <field name="name">프리미엄 휘발유</field>
+            <field name="default_code">GAS-PREM</field>
+            <field name="categ_id" ref="product_category_gasoline"/>
+            <field name="type">product</field>
+            <field name="uom_id" ref="uom.product_uom_litre"/>
+            <field name="uom_po_id" ref="uom.product_uom_litre"/>
+            <field name="list_price">1850.00</field>
+            <field name="standard_price">1650.00</field>
+            <field name="sale_ok">True</field>
+            <field name="purchase_ok">False</field>
+            <field name="tracking">lot</field>
+            <field name="description">옥탄가 95 이상, 고급 휘발유</field>
+        </record>
+
+        <record id="product_gasoline_regular" model="product.product">
+            <field name="name">일반 휘발유</field>
+            <field name="default_code">GAS-REG</field>
+            <field name="categ_id" ref="product_category_gasoline"/>
+            <field name="type">product</field>
+            <field name="uom_id" ref="uom.product_uom_litre"/>
+            <field name="uom_po_id" ref="uom.product_uom_litre"/>
+            <field name="list_price">1750.00</field>
+            <field name="standard_price">1550.00</field>
+            <field name="sale_ok">True</field>
+            <field name="purchase_ok">False</field>
+            <field name="tracking">lot</field>
+            <field name="description">옥탄가 91, 일반 휘발유</field>
+        </record>
+
+        <!-- 경유 제품들 -->
+        <record id="product_diesel_premium" model="product.product">
+            <field name="name">프리미엄 경유</field>
+            <field name="default_code">DIESEL-PREM</field>
+            <field name="categ_id" ref="product_category_diesel"/>
+            <field name="type">product</field>
+            <field name="uom_id" ref="uom.product_uom_litre"/>
+            <field name="uom_po_id" ref="uom.product_uom_litre"/>
+            <field name="list_price">1650.00</field>
+            <field name="standard_price">1450.00</field>
+            <field name="sale_ok">True</field>
+            <field name="purchase_ok">False</field>
+            <field name="tracking">lot</field>
+            <field name="description">저유황 경유, 황 함량 10ppm 이하</field>
+        </record>
+
+        <record id="product_diesel_regular" model="product.product">
+            <field name="name">일반 경유</field>
+            <field name="default_code">DIESEL-REG</field>
+            <field name="categ_id" ref="product_category_diesel"/>
+            <field name="type">product</field>
+            <field name="uom_id" ref="uom.product_uom_litre"/>
+            <field name="uom_po_id" ref="uom.product_uom_litre"/>
+            <field name="list_price">1550.00</field>
+            <field name="standard_price">1350.00</field>
+            <field name="sale_ok">True</field>
+            <field name="purchase_ok">False</field>
+            <field name="tracking">lot</field>
+            <field name="description">일반 경유, 황 함량 50ppm 이하</field>
+        </record>
+
+        <!-- 중유 제품들 -->
+        <record id="product_heavy_oil_bunker_c" model="product.product">
+            <field name="name">벙커C 중유</field>
+            <field name="default_code">HEAVY-BUNKER-C</field>
+            <field name="categ_id" ref="product_category_heavy_oil"/>
+            <field name="type">product</field>
+            <field name="uom_id" ref="uom.product_uom_litre"/>
+            <field name="uom_po_id" ref="uom.product_uom_litre"/>
+            <field name="list_price">650.00</field>
+            <field name="standard_price">550.00</field>
+            <field name="sale_ok">True</field>
+            <field name="purchase_ok">False</field>
+            <field name="tracking">lot</field>
+            <field name="description">선박용 중유, 점도 380cSt</field>
+        </record>
+
+        <record id="product_heavy_oil_industrial" model="product.product">
+            <field name="name">산업용 중유</field>
+            <field name="default_code">HEAVY-INDUST</field>
+            <field name="categ_id" ref="product_category_heavy_oil"/>
+            <field name="type">product</field>
+            <field name="uom_id" ref="uom.product_uom_litre"/>
+            <field name="uom_po_id" ref="uom.product_uom_litre"/>
+            <field name="list_price">700.00</field>
+            <field name="standard_price">600.00</field>
+            <field name="sale_ok">True</field>
+            <field name="purchase_ok">False</field>
+            <field name="tracking">lot</field>
+            <field name="description">보일러용 중유</field>
+        </record>
+
+        <!-- LPG 제품 -->
+        <record id="product_lpg" model="product.product">
+            <field name="name">액화석유가스 (LPG)</field>
+            <field name="default_code">LPG</field>
+            <field name="categ_id" ref="product_category_lpg"/>
+            <field name="type">product</field>
+            <field name="uom_id" ref="uom.product_uom_kg"/>
+            <field name="uom_po_id" ref="uom.product_uom_kg"/>
+            <field name="list_price">1200.00</field>
+            <field name="standard_price">1000.00</field>
+            <field name="sale_ok">True</field>
+            <field name="purchase_ok">False</field>
+            <field name="tracking">lot</field>
+            <field name="description">프로판/부탄 혼합 가스</field>
+        </record>
+
+        <!-- 나프타 제품 -->
+        <record id="product_naphtha_light" model="product.product">
+            <field name="name">경질 나프타</field>
+            <field name="default_code">NAPHTHA-LIGHT</field>
+            <field name="categ_id" ref="product_category_naphtha"/>
+            <field name="type">product</field>
+            <field name="uom_id" ref="uom.product_uom_litre"/>
+            <field name="uom_po_id" ref="uom.product_uom_litre"/>
+            <field name="list_price">950.00</field>
+            <field name="standard_price">850.00</field>
+            <field name="sale_ok">True</field>
+            <field name="purchase_ok">False</field>
+            <field name="tracking">lot</field>
+            <field name="description">화학 원료용 경질 나프타</field>
+        </record>
+
+        <record id="product_naphtha_heavy" model="product.product">
+            <field name="name">중질 나프타</field>
+            <field name="default_code">NAPHTHA-HEAVY</field>
+            <field name="categ_id" ref="product_category_naphtha"/>
+            <field name="type">product</field>
+            <field name="uom_id" ref="uom.product_uom_litre"/>
+            <field name="uom_po_id" ref="uom.product_uom_litre"/>
+            <field name="list_price">900.00</field>
+            <field name="standard_price">800.00</field>
+            <field name="sale_ok">True</field>
+            <field name="purchase_ok">False</field>
+            <field name="tracking">lot</field>
+            <field name="description">화학 원료용 중질 나프타</field>
+        </record>
+
+        <!-- 아스팔트 제품 -->
+        <record id="product_asphalt_paving" model="product.product">
+            <field name="name">포장용 아스팔트</field>
+            <field name="default_code">ASPHALT-PAVING</field>
+            <field name="categ_id" ref="product_category_asphalt"/>
+            <field name="type">product</field>
+            <field name="uom_id" ref="uom.product_uom_kg"/>
+            <field name="uom_po_id" ref="uom.product_uom_kg"/>
+            <field name="list_price">450.00</field>
+            <field name="standard_price">350.00</field>
+            <field name="sale_ok">True</field>
+            <field name="purchase_ok">False</field>
+            <field name="tracking">lot</field>
+            <field name="description">도로 포장용 아스팔트</field>
+        </record>
+
+        <record id="product_asphalt_roofing" model="product.product">
+            <field name="name">방수용 아스팔트</field>
+            <field name="default_code">ASPHALT-ROOF</field>
+            <field name="categ_id" ref="product_category_asphalt"/>
+            <field name="type">product</field>
+            <field name="uom_id" ref="uom.product_uom_kg"/>
+            <field name="uom_po_id" ref="uom.product_uom_kg"/>
+            <field name="list_price">500.00</field>
+            <field name="standard_price">400.00</field>
+            <field name="sale_ok">True</field>
+            <field name="purchase_ok">False</field>
+            <field name="tracking">lot</field>
+            <field name="description">지붕 방수용 아스팔트</field>
+        </record>
+
+        <!-- 윤활유 제품 -->
+        <record id="product_lubricant_engine_oil" model="product.product">
+            <field name="name">엔진오일</field>
+            <field name="default_code">LUBE-ENGINE</field>
+            <field name="categ_id" ref="product_category_lubricants"/>
+            <field name="type">product</field>
+            <field name="uom_id" ref="uom.product_uom_litre"/>
+            <field name="uom_po_id" ref="uom.product_uom_litre"/>
+            <field name="list_price">8500.00</field>
+            <field name="standard_price">7500.00</field>
+            <field name="sale_ok">True</field>
+            <field name="purchase_ok">False</field>
+            <field name="tracking">lot</field>
+            <field name="description">자동차용 엔진오일 5W-30</field>
+        </record>
+
+        <record id="product_lubricant_industrial" model="product.product">
+            <field name="name">산업용 윤활유</field>
+            <field name="default_code">LUBE-INDUST</field>
+            <field name="categ_id" ref="product_category_lubricants"/>
+            <field name="type">product</field>
+            <field name="uom_id" ref="uom.product_uom_litre"/>
+            <field name="uom_po_id" ref="uom.product_uom_litre"/>
+            <field name="list_price">6500.00</field>
+            <field name="standard_price">5500.00</field>
+            <field name="sale_ok">True</field>
+            <field name="purchase_ok">False</field>
+            <field name="tracking">lot</field>
+            <field name="description">기계용 산업 윤활유</field>
+        </record>
+
+        <!-- 화학 원료 제품 -->
+        <record id="product_chemical_ethylene" model="product.product">
+            <field name="name">에틸렌</field>
+            <field name="default_code">CHEM-ETHYLENE</field>
+            <field name="categ_id" ref="product_category_chemicals"/>
+            <field name="type">product</field>
+            <field name="uom_id" ref="uom.product_uom_kg"/>
+            <field name="uom_po_id" ref="uom.product_uom_kg"/>
+            <field name="list_price">1200.00</field>
+            <field name="standard_price">1000.00</field>
+            <field name="sale_ok">True</field>
+            <field name="purchase_ok">False</field>
+            <field name="tracking">lot</field>
+            <field name="description">화학 원료용 에틸렌</field>
+        </record>
+
+        <record id="product_chemical_propylene" model="product.product">
+            <field name="name">프로필렌</field>
+            <field name="default_code">CHEM-PROPYLENE</field>
+            <field name="categ_id" ref="product_category_chemicals"/>
+            <field name="type">product</field>
+            <field name="uom_id" ref="uom.product_uom_kg"/>
+            <field name="uom_po_id" ref="uom.product_uom_kg"/>
+            <field name="list_price">1100.00</field>
+            <field name="standard_price">950.00</field>
+            <field name="sale_ok">True</field>
+            <field name="purchase_ok">False</field>
+            <field name="tracking">lot</field>
+            <field name="description">화학 원료용 프로필렌</field>
+        </record>
+
+        <!-- 부산물 -->
+        <record id="product_byproduct_sulfur" model="product.product">
+            <field name="name">황</field>
+            <field name="default_code">BYPROD-SULFUR</field>
+            <field name="categ_id" ref="product_category_byproducts"/>
+            <field name="type">product</field>
+            <field name="uom_id" ref="uom.product_uom_kg"/>
+            <field name="uom_po_id" ref="uom.product_uom_kg"/>
+            <field name="list_price">300.00</field>
+            <field name="standard_price">200.00</field>
+            <field name="sale_ok">True</field>
+            <field name="purchase_ok">False</field>
+            <field name="tracking">lot</field>
+            <field name="description">정제 과정에서 생산되는 황</field>
+        </record>
+
+        <record id="product_byproduct_coke" model="product.product">
+            <field name="name">석유코크스</field>
+            <field name="default_code">BYPROD-COKE</field>
+            <field name="categ_id" ref="product_category_byproducts"/>
+            <field name="type">product</field>
+            <field name="uom_id" ref="uom.product_uom_kg"/>
+            <field name="uom_po_id" ref="uom.product_uom_kg"/>
+            <field name="list_price">250.00</field>
+            <field name="standard_price">150.00</field>
+            <field name="sale_ok">True</field>
+            <field name="purchase_ok">False</field>
+            <field name="tracking">lot</field>
+            <field name="description">정제 과정에서 생산되는 석유코크스</field>
+        </record>
+    </data>
+</odoo>
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- 
+            판매 주문은 Python 스크립트로 생성하는 것을 권장합니다.
+            scripts/create_orders.py 파일의 create_sale_orders() 함수를 사용하세요.
+            
+            이 파일은 주석 처리되어 있으며, 필요시 아래 주석을 해제하여 사용할 수 있습니다.
+            단, ref() 함수는 모듈 이름을 포함해야 합니다 (예: 'oil_refining_demo.product_gasoline_premium')
+        -->
+    </data>
+</odoo>
+

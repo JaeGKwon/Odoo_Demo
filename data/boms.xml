@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- 휘발유 정제 BOM -->
+        <record id="bom_gasoline_premium" model="mrp.bom">
+            <field name="product_tmpl_id" ref="product_gasoline_premium.product_tmpl_id"/>
+            <field name="product_qty">1000.0</field>
+            <field name="product_uom_id" ref="uom.product_uom_litre"/>
+            <field name="type">normal</field>
+            <field name="code">BOM-GAS-PREM-001</field>
+            <field name="bom_line_ids" eval="[(0, 0, {
+                'product_id': ref('product_crude_oil_arabian_light'),
+                'product_qty': 1200.0,
+                'product_uom_id': ref('uom.product_uom_litre'),
+            }), (0, 0, {
+                'product_id': ref('product_naphtha_light'),
+                'product_qty': 200.0,
+                'product_uom_id': ref('uom.product_uom_litre'),
+            })]"/>
+        </record>
+
+        <record id="bom_gasoline_regular" model="mrp.bom">
+            <field name="product_tmpl_id" ref="product_gasoline_regular.product_tmpl_id"/>
+            <field name="product_qty">1000.0</field>
+            <field name="product_uom_id" ref="uom.product_uom_litre"/>
+            <field name="type">normal</field>
+            <field name="code">BOM-GAS-REG-001</field>
+            <field name="bom_line_ids" eval="[(0, 0, {
+                'product_id': ref('product_crude_oil_dubai'),
+                'product_qty': 1150.0,
+                'product_uom_id': ref('uom.product_uom_litre'),
+            }), (0, 0, {
+                'product_id': ref('product_naphtha_light'),
+                'product_qty': 150.0,
+                'product_uom_id': ref('uom.product_uom_litre'),
+            })]"/>
+        </record>
+
+        <!-- 경유 정제 BOM -->
+        <record id="bom_diesel_premium" model="mrp.bom">
+            <field name="product_tmpl_id" ref="product_diesel_premium.product_tmpl_id"/>
+            <field name="product_qty">1000.0</field>
+            <field name="product_uom_id" ref="uom.product_uom_litre"/>
+            <field name="type">normal</field>
+            <field name="code">BOM-DIESEL-PREM-001</field>
+            <field name="bom_line_ids" eval="[(0, 0, {
+                'product_id': ref('product_crude_oil_wti'),
+                'product_qty': 1100.0,
+                'product_uom_id': ref('uom.product_uom_litre'),
+            }), (0, 0, {
+                'product_id': ref('product_naphtha_heavy'),
+                'product_qty': 100.0,
+                'product_uom_id': ref('uom.product_uom_litre'),
+            })]"/>
+        </record>
+
+        <record id="bom_diesel_regular" model="mrp.bom">
+            <field name="product_tmpl_id" ref="product_diesel_regular.product_tmpl_id"/>
+            <field name="product_qty">1000.0</field>
+            <field name="product_uom_id" ref="uom.product_uom_litre"/>
+            <field name="type">normal</field>
+            <field name="code">BOM-DIESEL-REG-001</field>
+            <field name="bom_line_ids" eval="[(0, 0, {
+                'product_id': ref('product_crude_oil_arabian_heavy'),
+                'product_qty': 1050.0,
+                'product_uom_id': ref('uom.product_uom_litre'),
+            }), (0, 0, {
+                'product_id': ref('product_naphtha_heavy'),
+                'product_qty': 80.0,
+                'product_uom_id': ref('uom.product_uom_litre'),
+            })]"/>
+        </record>
+
+        <!-- 중유 정제 BOM -->
+        <record id="bom_heavy_oil_bunker_c" model="mrp.bom">
+            <field name="product_tmpl_id" ref="product_heavy_oil_bunker_c.product_tmpl_id"/>
+            <field name="product_qty">1000.0</field>
+            <field name="product_uom_id" ref="uom.product_uom_litre"/>
+            <field name="type">normal</field>
+            <field name="code">BOM-HEAVY-BUNKER-001</field>
+            <field name="bom_line_ids" eval="[(0, 0, {
+                'product_id': ref('product_crude_oil_arabian_heavy'),
+                'product_qty': 950.0,
+                'product_uom_id': ref('uom.product_uom_litre'),
+            })]"/>
+        </record>
+
+        <record id="bom_heavy_oil_industrial" model="mrp.bom">
+            <field name="product_tmpl_id" ref="product_heavy_oil_industrial.product_tmpl_id"/>
+            <field name="product_qty">1000.0</field>
+            <field name="product_uom_id" ref="uom.product_uom_litre"/>
+            <field name="type">normal</field>
+            <field name="code">BOM-HEAVY-INDUST-001</field>
+            <field name="bom_line_ids" eval="[(0, 0, {
+                'product_id': ref('product_crude_oil_dubai'),
+                'product_qty': 980.0,
+                'product_uom_id': ref('uom.product_uom_litre'),
+            })]"/>
+        </record>
+
+        <!-- LPG 정제 BOM -->
+        <record id="bom_lpg" model="mrp.bom">
+            <field name="product_tmpl_id" ref="product_lpg.product_tmpl_id"/>
+            <field name="product_qty">1000.0</field>
+            <field name="product_uom_id" ref="uom.product_uom_kg"/>
+            <field name="type">normal</field>
+            <field name="code">BOM-LPG-001</field>
+            <field name="bom_line_ids" eval="[(0, 0, {
+                'product_id': ref('product_crude_oil_arabian_light'),
+                'product_qty': 800.0,
+                'product_uom_id': ref('uom.product_uom_litre'),
+            }), (0, 0, {
+                'product_id': ref('product_naphtha_light'),
+                'product_qty': 300.0,
+                'product_uom_id': ref('uom.product_uom_litre'),
+            })]"/>
+        </record>
+
+        <!-- 나프타 정제 BOM -->
+        <record id="bom_naphtha_light" model="mrp.bom">
+            <field name="product_tmpl_id" ref="product_naphtha_light.product_tmpl_id"/>
+            <field name="product_qty">1000.0</field>
+            <field name="product_uom_id" ref="uom.product_uom_litre"/>
+            <field name="type">normal</field>
+            <field name="code">BOM-NAPHTHA-LIGHT-001</field>
+            <field name="bom_line_ids" eval="[(0, 0, {
+                'product_id': ref('product_crude_oil_arabian_light'),
+                'product_qty': 900.0,
+                'product_uom_id': ref('uom.product_uom_litre'),
+            })]"/>
+        </record>
+
+        <record id="bom_naphtha_heavy" model="mrp.bom">
+            <field name="product_tmpl_id" ref="product_naphtha_heavy.product_tmpl_id"/>
+            <field name="product_qty">1000.0</field>
+            <field name="product_uom_id" ref="uom.product_uom_litre"/>
+            <field name="type">normal</field>
+            <field name="code">BOM-NAPHTHA-HEAVY-001</field>
+            <field name="bom_line_ids" eval="[(0, 0, {
+                'product_id': ref('product_crude_oil_dubai'),
+                'product_qty': 920.0,
+                'product_uom_id': ref('uom.product_uom_litre'),
+            })]"/>
+        </record>
+
+        <!-- 아스팔트 정제 BOM -->
+        <record id="bom_asphalt_paving" model="mrp.bom">
+            <field name="product_tmpl_id" ref="product_asphalt_paving.product_tmpl_id"/>
+            <field name="product_qty">1000.0</field>
+            <field name="product_uom_id" ref="uom.product_uom_kg"/>
+            <field name="type">normal</field>
+            <field name="code">BOM-ASPHALT-PAVING-001</field>
+            <field name="bom_line_ids" eval="[(0, 0, {
+                'product_id': ref('product_crude_oil_arabian_heavy'),
+                'product_qty': 850.0,
+                'product_uom_id': ref('uom.product_uom_litre'),
+            }), (0, 0, {
+                'product_id': ref('product_byproduct_coke'),
+                'product_qty': 50.0,
+                'product_uom_id': ref('uom.product_uom_kg'),
+            })]"/>
+        </record>
+
+        <record id="bom_asphalt_roofing" model="mrp.bom">
+            <field name="product_tmpl_id" ref="product_asphalt_roofing.product_tmpl_id"/>
+            <field name="product_qty">1000.0</field>
+            <field name="product_uom_id" ref="uom.product_uom_kg"/>
+            <field name="type">normal</field>
+            <field name="code">BOM-ASPHALT-ROOF-001</field>
+            <field name="bom_line_ids" eval="[(0, 0, {
+                'product_id': ref('product_crude_oil_arabian_heavy'),
+                'product_qty': 880.0,
+                'product_uom_id': ref('uom.product_uom_litre'),
+            }), (0, 0, {
+                'product_id': ref('product_byproduct_coke'),
+                'product_qty': 60.0,
+                'product_uom_id': ref('uom.product_uom_kg'),
+            })]"/>
+        </record>
+
+        <!-- 윤활유 정제 BOM -->
+        <record id="bom_lubricant_engine_oil" model="mrp.bom">
+            <field name="product_tmpl_id" ref="product_lubricant_engine_oil.product_tmpl_id"/>
+            <field name="product_qty">1000.0</field>
+            <field name="product_uom_id" ref="uom.product_uom_litre"/>
+            <field name="type">normal</field>
+            <field name="code">BOM-LUBE-ENGINE-001</field>
+            <field name="bom_line_ids" eval="[(0, 0, {
+                'product_id': ref('product_crude_oil_wti'),
+                'product_qty': 700.0,
+                'product_uom_id': ref('uom.product_uom_litre'),
+            }), (0, 0, {
+                'product_id': ref('product_naphtha_light'),
+                'product_qty': 150.0,
+                'product_uom_id': ref('uom.product_uom_litre'),
+            })]"/>
+        </record>
+
+        <record id="bom_lubricant_industrial" model="mrp.bom">
+            <field name="product_tmpl_id" ref="product_lubricant_industrial.product_tmpl_id"/>
+            <field name="product_qty">1000.0</field>
+            <field name="product_uom_id" ref="uom.product_uom_litre"/>
+            <field name="type">normal</field>
+            <field name="code">BOM-LUBE-INDUST-001</field>
+            <field name="bom_line_ids" eval="[(0, 0, {
+                'product_id': ref('product_crude_oil_dubai'),
+                'product_qty': 750.0,
+                'product_uom_id': ref('uom.product_uom_litre'),
+            }), (0, 0, {
+                'product_id': ref('product_naphtha_heavy'),
+                'product_qty': 120.0,
+                'product_uom_id': ref('uom.product_uom_litre'),
+            })]"/>
+        </record>
+
+        <!-- 화학 원료 정제 BOM -->
+        <record id="bom_chemical_ethylene" model="mrp.bom">
+            <field name="product_tmpl_id" ref="product_chemical_ethylene.product_tmpl_id"/>
+            <field name="product_qty">1000.0</field>
+            <field name="product_uom_id" ref="uom.product_uom_kg"/>
+            <field name="type">normal</field>
+            <field name="code">BOM-CHEM-ETHYLENE-001</field>
+            <field name="bom_line_ids" eval="[(0, 0, {
+                'product_id': ref('product_naphtha_light'),
+                'product_qty': 1200.0,
+                'product_uom_id': ref('uom.product_uom_litre'),
+            })]"/>
+        </record>
+
+        <record id="bom_chemical_propylene" model="mrp.bom">
+            <field name="product_tmpl_id" ref="product_chemical_propylene.product_tmpl_id"/>
+            <field name="product_qty">1000.0</field>
+            <field name="product_uom_id" ref="uom.product_uom_kg"/>
+            <field name="type">normal</field>
+            <field name="code">BOM-CHEM-PROPYLENE-001</field>
+            <field name="bom_line_ids" eval="[(0, 0, {
+                'product_id': ref('product_naphtha_heavy'),
+                'product_qty': 1150.0,
+                'product_uom_id': ref('uom.product_uom_litre'),
+            })]"/>
+        </record>
+
+        <!-- 부산물 생산 BOM -->
+        <record id="bom_byproduct_sulfur" model="mrp.bom">
+            <field name="product_tmpl_id" ref="product_byproduct_sulfur.product_tmpl_id"/>
+            <field name="product_qty">100.0</field>
+            <field name="product_uom_id" ref="uom.product_uom_kg"/>
+            <field name="type">normal</field>
+            <field name="code">BOM-BYPROD-SULFUR-001</field>
+            <field name="bom_line_ids" eval="[(0, 0, {
+                'product_id': ref('product_crude_oil_arabian_heavy'),
+                'product_qty': 5000.0,
+                'product_uom_id': ref('uom.product_uom_litre'),
+            })]"/>
+        </record>
+
+        <record id="bom_byproduct_coke" model="mrp.bom">
+            <field name="product_tmpl_id" ref="product_byproduct_coke.product_tmpl_id"/>
+            <field name="product_qty">100.0</field>
+            <field name="product_uom_id" ref="uom.product_uom_kg"/>
+            <field name="type">normal</field>
+            <field name="code">BOM-BYPROD-COKE-001</field>
+            <field name="bom_line_ids" eval="[(0, 0, {
+                'product_id': ref('product_crude_oil_arabian_heavy'),
+                'product_qty': 4500.0,
+                'product_uom_id': ref('uom.product_uom_litre'),
+            })]"/>
+        </record>
+    </data>
+</odoo>
+

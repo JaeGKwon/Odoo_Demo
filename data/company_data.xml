@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- 회사 정보 -->
+        <record id="base.main_company" model="res.company">
+            <field name="name">한국정유화학주식회사</field>
+            <field name="street">정유로 123번길 45</field>
+            <field name="city">울산광역시</field>
+            <field name="zip">44989</field>
+            <field name="country_id" ref="base.kr"/>
+            <field name="phone">+82-52-123-4567</field>
+            <field name="email">info@korearefining.co.kr</field>
+            <field name="website">www.korearefining.co.kr</field>
+            <field name="vat">123-45-67890</field>
+            <field name="currency_id" ref="base.KRW"/>
+        </record>
+
+        <!-- 회사 로고 및 추가 정보 -->
+        <record id="base.main_partner" model="res.partner">
+            <field name="name">한국정유화학주식회사</field>
+            <field name="company_type">company</field>
+            <field name="is_company">True</field>
+            <field name="street">정유로 123번길 45</field>
+            <field name="city">울산광역시</field>
+            <field name="zip">44989</field>
+            <field name="country_id" ref="base.kr"/>
+            <field name="phone">+82-52-123-4567</field>
+            <field name="email">info@korearefining.co.kr</field>
+            <field name="website">www.korearefining.co.kr</field>
+            <field name="vat">123-45-67890</field>
+            <field name="category_id" eval="[(6, 0, [ref('base.res_partner_category_0')])]"/>
+        </record>
+    </data>
+</odoo>
+

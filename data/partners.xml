@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- 공급업체 카테고리 -->
+        <record id="partner_category_supplier" model="res.partner.category">
+            <field name="name">원유 공급업체</field>
+        </record>
+
+        <record id="partner_category_customer" model="res.partner.category">
+            <field name="name">주요 고객</field>
+        </record>
+
+        <!-- 원유 공급업체들 -->
+        <record id="partner_supplier_saudi_aramco" model="res.partner">
+            <field name="name">사우디 아람코</field>
+            <field name="company_type">company</field>
+            <field name="is_company">True</field>
+            <field name="supplier_rank">10</field>
+            <field name="customer_rank">0</field>
+            <field name="is_supplier">True</field>
+            <field name="street">King Fahd Road</field>
+            <field name="city">Dhahran</field>
+            <field name="country_id" ref="base.sa"/>
+            <field name="phone">+966-13-874-0000</field>
+            <field name="email">procurement@aramco.com</field>
+            <field name="website">www.aramco.com</field>
+            <field name="category_id" eval="[(6, 0, [ref('partner_category_supplier')])]"/>
+            <field name="comment">세계 최대 원유 생산 회사, 주요 원유 공급업체</field>
+        </record>
+
+        <record id="partner_supplier_adnoc" model="res.partner">
+            <field name="name">아부다비 국영석유공사 (ADNOC)</field>
+            <field name="company_type">company</field>
+            <field name="is_company">True</field>
+            <field name="supplier_rank">9</field>
+            <field name="customer_rank">0</field>
+            <field name="is_supplier">True</field>
+            <field name="street">Corniche Road</field>
+            <field name="city">Abu Dhabi</field>
+            <field name="country_id" ref="base.ae"/>
+            <field name="phone">+971-2-602-0000</field>
+            <field name="email">sales@adnoc.ae</field>
+            <field name="website">www.adnoc.ae</field>
+            <field name="category_id" eval="[(6, 0, [ref('partner_category_supplier')])]"/>
+            <field name="comment">아랍에미리트 국영 석유 회사</field>
+        </record>
+
+        <record id="partner_supplier_exxonmobil" model="res.partner">
+            <field name="name">엑슨모빌 코리아</field>
+            <field name="company_type">company</field>
+            <field name="is_company">True</field>
+            <field name="supplier_rank">8</field>
+            <field name="customer_rank">0</field>
+            <field name="is_supplier">True</field>
+            <field name="street">테헤란로 152</field>
+            <field name="city">서울특별시</field>
+            <field name="zip">06236</field>
+            <field name="country_id" ref="base.kr"/>
+            <field name="phone">+82-2-3456-7890</field>
+            <field name="email">korea@exxonmobil.com</field>
+            <field name="website">www.exxonmobil.com</field>
+            <field name="category_id" eval="[(6, 0, [ref('partner_category_supplier')])]"/>
+            <field name="comment">엑슨모빌 한국 지사, 원유 및 석유 제품 공급</field>
+        </record>
+
+        <record id="partner_supplier_shell" model="res.partner">
+            <field name="name">셸 코리아</field>
+            <field name="company_type">company</field>
+            <field name="is_company">True</field>
+            <field name="supplier_rank">7</field>
+            <field name="customer_rank">0</field>
+            <field name="is_supplier">True</field>
+            <field name="street">서초대로 396</field>
+            <field name="city">서울특별시</field>
+            <field name="zip">06611</field>
+            <field name="country_id" ref="base.kr"/>
+            <field name="phone">+82-2-3456-7891</field>
+            <field name="email">korea@shell.com</field>
+            <field name="website">www.shell.co.kr</field>
+            <field name="category_id" eval="[(6, 0, [ref('partner_category_supplier')])]"/>
+            <field name="comment">셸 한국 지사</field>
+        </record>
+
+        <record id="partner_supplier_chevron" model="res.partner">
+            <field name="name">셰브론 코리아</field>
+            <field name="company_type">company</field>
+            <field name="is_company">True</field>
+            <field name="supplier_rank">6</field>
+            <field name="customer_rank">0</field>
+            <field name="is_supplier">True</field>
+            <field name="street">강남대로 298</field>
+            <field name="city">서울특별시</field>
+            <field name="zip">06234</field>
+            <field name="country_id" ref="base.kr"/>
+            <field name="phone">+82-2-3456-7892</field>
+            <field name="email">korea@chevron.com</field>
+            <field name="website">www.chevron.com</field>
+            <field name="category_id" eval="[(6, 0, [ref('partner_category_supplier')])]"/>
+            <field name="comment">셰브론 한국 지사</field>
+        </record>
+
+        <!-- 주요 고객들 -->
+        <record id="partner_customer_gs_caltex" model="res.partner">
+            <field name="name">GS칼텍스</field>
+            <field name="company_type">company</field>
+            <field name="is_company">True</field>
+            <field name="supplier_rank">0</field>
+            <field name="customer_rank">10</field>
+            <field name="is_customer">True</field>
+            <field name="street">서초동 1468-13</field>
+            <field name="city">서울특별시</field>
+            <field name="zip">06735</field>
+            <field name="country_id" ref="base.kr"/>
+            <field name="phone">+82-2-2005-2005</field>
+            <field name="email">contact@gscaltex.com</field>
+            <field name="website">www.gscaltex.co.kr</field>
+            <field name="vat">120-81-00001</field>
+            <field name="category_id" eval="[(6, 0, [ref('partner_category_customer')])]"/>
+            <field name="comment">주요 정유 회사, 대량 구매 고객</field>
+        </record>
+
+        <record id="partner_customer_sk_energy" model="res.partner">
+            <field name="name">SK에너지</field>
+            <field name="company_type">company</field>
+            <field name="is_company">True</field>
+            <field name="supplier_rank">0</field>
+            <field name="customer_rank">9</field>
+            <field name="is_customer">True</field>
+            <field name="street">을지로 26</field>
+            <field name="city">서울특별시</field>
+            <field name="zip">04533</field>
+            <field name="country_id" ref="base.kr"/>
+            <field name="phone">+82-2-2121-5114</field>
+            <field name="email">contact@skenergy.com</field>
+            <field name="website">www.skenergy.co.kr</field>
+            <field name="vat">104-81-00001</field>
+            <field name="category_id" eval="[(6, 0, [ref('partner_category_customer')])]"/>
+            <field name="comment">SK그룹 계열 정유 회사</field>
+        </record>
+
+        <record id="partner_customer_s_oil" model="res.partner">
+            <field name="name">S-OIL</field>
+            <field name="company_type">company</field>
+            <field name="is_company">True</field>
+            <field name="supplier_rank">0</field>
+            <field name="customer_rank">8</field>
+            <field name="is_customer">True</field>
+            <field name="street">서초동 1468-13</field>
+            <field name="city">서울특별시</field>
+            <field name="zip">06735</field>
+            <field name="country_id" ref="base.kr"/>
+            <field name="phone">+82-2-2005-2005</field>
+            <field name="email">contact@soil.co.kr</field>
+            <field name="website">www.soil.co.kr</field>
+            <field name="vat">120-81-00002</field>
+            <field name="category_id" eval="[(6, 0, [ref('partner_category_customer')])]"/>
+            <field name="comment">삼성그룹 계열 정유 회사</field>
+        </record>
+
+        <record id="partner_customer_hyundai_oilbank" model="res.partner">
+            <field name="name">현대오일뱅크</field>
+            <field name="company_type">company</field>
+            <field name="is_company">True</field>
+            <field name="supplier_rank">0</field>
+            <field name="customer_rank">7</field>
+            <field name="is_customer">True</field>
+            <field name="street">을지로 51</field>
+            <field name="city">서울특별시</field>
+            <field name="zip">04531</field>
+            <field name="country_id" ref="base.kr"/>
+            <field name="phone">+82-2-3464-5114</field>
+            <field name="email">contact@oilbank.co.kr</field>
+            <field name="website">www.oilbank.co.kr</field>
+            <field name="vat">101-81-00001</field>
+            <field name="category_id" eval="[(6, 0, [ref('partner_category_customer')])]"/>
+            <field name="comment">현대그룹 계열 정유 회사</field>
+        </record>
+
+        <record id="partner_customer_lotte_chemical" model="res.partner">
+            <field name="name">롯데케미칼</field>
+            <field name="company_type">company</field>
+            <field name="is_company">True</field>
+            <field name="supplier_rank">0</field>
+            <field name="customer_rank">6</field>
+            <field name="is_customer">True</field>
+            <field name="street">을지로 30</field>
+            <field name="city">서울특별시</field>
+            <field name="zip">04533</field>
+            <field name="country_id" ref="base.kr"/>
+            <field name="phone">+82-2-829-4000</field>
+            <field name="email">contact@lottechem.com</field>
+            <field name="website">www.lottechem.com</field>
+            <field name="vat">120-81-00003</field>
+            <field name="category_id" eval="[(6, 0, [ref('partner_category_customer')])]"/>
+            <field name="comment">화학 원료 구매 고객</field>
+        </record>
+
+        <record id="partner_customer_hanwha_chemical" model="res.partner">
+            <field name="name">한화케미칼</field>
+            <field name="company_type">company</field>
+            <field name="is_company">True</field>
+            <field name="supplier_rank">0</field>
+            <field name="customer_rank">5</field>
+            <field name="is_customer">True</field>
+            <field name="street">을지로 65</field>
+            <field name="city">서울특별시</field>
+            <field name="zip">04533</field>
+            <field name="country_id" ref="base.kr"/>
+            <field name="phone">+82-2-729-2000</field>
+            <field name="email">contact@hanwha-chem.com</field>
+            <field name="website">www.hanwha-chem.com</field>
+            <field name="vat">101-81-00002</field>
+            <field name="category_id" eval="[(6, 0, [ref('partner_category_customer')])]"/>
+            <field name="comment">화학 원료 구매 고객</field>
+        </record>
+
+        <record id="partner_customer_kumho_petrochem" model="res.partner">
+            <field name="name">금호석유화학</field>
+            <field name="company_type">company</field>
+            <field name="is_company">True</field>
+            <field name="supplier_rank">0</field>
+            <field name="customer_rank">4</field>
+            <field name="is_customer">True</field>
+            <field name="street">을지로 10</field>
+            <field name="city">서울특별시</field>
+            <field name="zip">04533</field>
+            <field name="country_id" ref="base.kr"/>
+            <field name="phone">+82-2-2000-4000</field>
+            <field name="email">contact@kumho-petrochem.com</field>
+            <field name="website">www.kumho-petrochem.com</field>
+            <field name="vat">101-81-00003</field>
+            <field name="category_id" eval="[(6, 0, [ref('partner_category_customer')])]"/>
+            <field name="comment">석유화학 제품 구매 고객</field>
+        </record>
+
+        <record id="partner_customer_construction_company_1" model="res.partner">
+            <field name="name">대한건설</field>
+            <field name="company_type">company</field>
+            <field name="is_company">True</field>
+            <field name="supplier_rank">0</field>
+            <field name="customer_rank">3</field>
+            <field name="is_customer">True</field>
+            <field name="street">테헤란로 152</field>
+            <field name="city">서울특별시</field>
+            <field name="zip">06236</field>
+            <field name="country_id" ref="base.kr"/>
+            <field name="phone">+82-2-3456-7000</field>
+            <field name="email">purchase@daehan-const.com</field>
+            <field name="website">www.daehan-const.com</field>
+            <field name="vat">120-81-00004</field>
+            <field name="category_id" eval="[(6, 0, [ref('partner_category_customer')])]"/>
+            <field name="comment">아스팔트 구매 고객</field>
+        </record>
+
+        <record id="partner_customer_shipping_company_1" model="res.partner">
+            <field name="name">한국해운</field>
+            <field name="company_type">company</field>
+            <field name="is_company">True</field>
+            <field name="supplier_rank">0</field>
+            <field name="customer_rank">2</field>
+            <field name="is_customer">True</field>
+            <field name="street">여의대로 24</field>
+            <field name="city">서울특별시</field>
+            <field name="zip">07333</field>
+            <field name="country_id" ref="base.kr"/>
+            <field name="phone">+82-2-3456-8000</field>
+            <field name="email">fuel@korea-shipping.com</field>
+            <field name="website">www.korea-shipping.com</field>
+            <field name="vat">120-81-00005</field>
+            <field name="category_id" eval="[(6, 0, [ref('partner_category_customer')])]"/>
+            <field name="comment">벙커C 중유 구매 고객</field>
+        </record>
+    </data>
+</odoo>
+

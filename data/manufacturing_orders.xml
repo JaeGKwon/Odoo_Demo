@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- 제조 주문은 Python 스크립트로 동적 생성하는 것이 더 좋지만, 
+             여기서는 기본 구조만 제공합니다 -->
+        
+        <!-- 제조 라우팅 설정 -->
+        <record id="mrp_routing_refining" model="mrp.routing.workcenter">
+            <field name="name">정제 공정</field>
+            <field name="workcenter_id" ref="mrp.workcenter_0"/>
+            <field name="time_cycle_manual">480.0</field>
+            <field name="time_mode">manual</field>
+        </record>
+
+        <record id="mrp_routing_distillation" model="mrp.routing.workcenter">
+            <field name="name">증류 공정</field>
+            <field name="workcenter_id" ref="mrp.workcenter_0"/>
+            <field name="time_cycle_manual">360.0</field>
+            <field name="time_mode">manual</field>
+        </record>
+
+        <record id="mrp_routing_cracking" model="mrp.routing.workcenter">
+            <field name="name">분해 공정</field>
+            <field name="workcenter_id" ref="mrp.workcenter_0"/>
+            <field name="time_cycle_manual">420.0</field>
+            <field name="time_mode">manual</field>
+        </record>
+
+        <record id="mrp_routing_treatment" model="mrp.routing.workcenter">
+            <field name="name">처리 공정</field>
+            <field name="workcenter_id" ref="mrp.workcenter_0"/>
+            <field name="time_cycle_manual">240.0</field>
+            <field name="time_mode">manual</field>
+        </record>
+    </data>
+</odoo>
+

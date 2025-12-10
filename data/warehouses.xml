@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- 원료 창고 -->
+        <record id="stock_warehouse_raw_materials" model="stock.warehouse">
+            <field name="name">원료 창고</field>
+            <field name="code">RAW</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="partner_id" ref="base.main_partner"/>
+        </record>
+
+        <!-- 완제품 창고 -->
+        <record id="stock_warehouse_finished_goods" model="stock.warehouse">
+            <field name="name">완제품 창고</field>
+            <field name="code">FG</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="partner_id" ref="base.main_partner"/>
+        </record>
+
+        <!-- 부산물 창고 -->
+        <record id="stock_warehouse_byproducts" model="stock.warehouse">
+            <field name="name">부산물 창고</field>
+            <field name="code">BYPROD</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="partner_id" ref="base.main_partner"/>
+        </record>
+
+        <!-- 원유 저장 탱크 위치 -->
+        <record id="stock_location_crude_oil_tank_1" model="stock.location">
+            <field name="name">원유 탱크 1호</field>
+            <field name="location_id" ref="stock.stock_location_locations"/>
+            <field name="usage">internal</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="stock_location_crude_oil_tank_2" model="stock.location">
+            <field name="name">원유 탱크 2호</field>
+            <field name="location_id" ref="stock.stock_location_locations"/>
+            <field name="usage">internal</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="stock_location_crude_oil_tank_3" model="stock.location">
+            <field name="name">원유 탱크 3호</field>
+            <field name="location_id" ref="stock.stock_location_locations"/>
+            <field name="usage">internal</field>
+            <field name="active">True</field>
+        </record>
+
+        <!-- 휘발유 저장 탱크 -->
+        <record id="stock_location_gasoline_tank_1" model="stock.location">
+            <field name="name">휘발유 탱크 1호</field>
+            <field name="location_id" ref="stock.stock_location_locations"/>
+            <field name="usage">internal</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="stock_location_gasoline_tank_2" model="stock.location">
+            <field name="name">휘발유 탱크 2호</field>
+            <field name="location_id" ref="stock.stock_location_locations"/>
+            <field name="usage">internal</field>
+            <field name="active">True</field>
+        </record>
+
+        <!-- 경유 저장 탱크 -->
+        <record id="stock_location_diesel_tank_1" model="stock.location">
+            <field name="name">경유 탱크 1호</field>
+            <field name="location_id" ref="stock.stock_location_locations"/>
+            <field name="usage">internal</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="stock_location_diesel_tank_2" model="stock.location">
+            <field name="name">경유 탱크 2호</field>
+            <field name="location_id" ref="stock.stock_location_locations"/>
+            <field name="usage">internal</field>
+            <field name="active">True</field>
+        </record>
+
+        <!-- 중유 저장 탱크 -->
+        <record id="stock_location_heavy_oil_tank_1" model="stock.location">
+            <field name="name">중유 탱크 1호</field>
+            <field name="location_id" ref="stock.stock_location_locations"/>
+            <field name="usage">internal</field>
+            <field name="active">True</field>
+        </record>
+
+        <!-- LPG 저장 탱크 -->
+        <record id="stock_location_lpg_tank_1" model="stock.location">
+            <field name="name">LPG 탱크 1호</field>
+            <field name="location_id" ref="stock.stock_location_locations"/>
+            <field name="usage">internal</field>
+            <field name="active">True</field>
+        </record>
+
+        <!-- 나프타 저장 탱크 -->
+        <record id="stock_location_naphtha_tank_1" model="stock.location">
+            <field name="name">나프타 탱크 1호</field>
+            <field name="location_id" ref="stock.stock_location_locations"/>
+            <field name="usage">internal</field>
+            <field name="active">True</field>
+        </record>
+
+        <!-- 아스팔트 저장소 -->
+        <record id="stock_location_asphalt_storage" model="stock.location">
+            <field name="name">아스팔트 저장소</field>
+            <field name="location_id" ref="stock.stock_location_locations"/>
+            <field name="usage">internal</field>
+            <field name="active">True</field>
+        </record>
+
+        <!-- 윤활유 저장소 -->
+        <record id="stock_location_lubricant_storage" model="stock.location">
+            <field name="name">윤활유 저장소</field>
+            <field name="location_id" ref="stock.stock_location_locations"/>
+            <field name="usage">internal</field>
+            <field name="active">True</field>
+        </record>
+
+        <!-- 화학 원료 저장소 -->
+        <record id="stock_location_chemical_storage" model="stock.location">
+            <field name="name">화학 원료 저장소</field>
+            <field name="location_id" ref="stock.stock_location_locations"/>
+            <field name="usage">internal</field>
+            <field name="active">True</field>
+        </record>
+
+        <!-- 부산물 저장소 -->
+        <record id="stock_location_byproduct_storage" model="stock.location">
+            <field name="name">부산물 저장소</field>
+            <field name="location_id" ref="stock.stock_location_locations"/>
+            <field name="usage">internal</field>
+            <field name="active">True</field>
+        </record>
+    </data>
+</odoo>
+
